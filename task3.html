@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html {
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain;
+  }
+  
+  body {
+    flex-direction:column;
+    display:flex;
+    height:100vh;
+  }
+  
+  div {
+    overflow:scroll;
+    flex-grow:1;
+    width:100%;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width:200%;
+  }
+  
+  thead tr > th {
+    background:#ccc;
+    position: sticky;
+    padding:.5rem;
+    z-index:2;
+    top: 0;
+  }
+  
+  thead tr > :first-child {
+    z-index:3;
+    left:0;
+    top:0;
+  }
+  
+  td {
+    text-align:center;
+  }
+  
+  tbody tr > :first-child {
+    background:#ddd;
+    position: sticky;
+    z-index:1;
+    left:0;
+  }
+</style>
+<body>
+  
+<p>STUDENT DETAILS</p>
+
+<div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>FAST NAME </th>
+      <th>LAST NAME</th>
+      <th>FATHER NAME</th>
+      <th>MOTHER NAME</th>
+      <th>Email ID</th>
+      <th> MOBILE NO</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    
+    
+    <tr>
+      <td>001</td>
+      <td>palla</td>
+      <td>gouthami</td>
+      <td>veeraiah</td>
+      <td>pullamma</td>
+      <td>palla123@gmail.com</td>
+      <td>345678923</td>
+      
+    </tr>
+    <tr>
+      <td>002</td>
+    
+      <td>Pocham</td>
+      <td>siri</td>
+      <td>rajesh</td>
+      <td>kamala</td>
+      <td>siri123@gmail.com</td>
+      <td>23456789</td>
+    </tr>
+    <tr>
+      <td>003</td>
+      <td>sana</td>
+      <td>balaji</td>
+      <td>venkatesh</td>
+      <td>subbamma</td>
+      <td>balaji123@gmail.com</td>
+      <td>123453456</td>
+      
+    </tr>
+    <tr>
+      <td>004</td>
+      <td>golla</td>
+      <td>swathi</td>
+      <td>raj</td>
+      <td>lakshmi devi</td>
+      <td>swathi123@gmail.com</td>
+      <td>1234567891</td>
+      
+    </tr>
+    <tr>
+      <td>005</td>
+      <td>jekka</td>
+      <td>latha</td>
+      <td>suresh</td>
+      <td>sudha</td>
+      <td>latha@gmail.com</td>
+      <td>123456784</td>
+      
+    </tr>
+    <tr>
+      <td>006</td>
+      <td>chowdam</td>
+      <td>sudha</td>
+      <td>subbaiah</td>
+      <td>devi</td>
+      <td>sudha@gamil.com</td>
+      <td>1234567893</td>
+      
+    </tr>
+    <tr>
+      <td>007</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      
+    </tr>
+    <tr>
+      <td>008</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      
+    </tr>
+    <tr>
+      <td>009</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      
+    </tr>
+    <tr>
+      <td>010</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+  
+</div>
+
+<p>World</p>
+</body>
+</html>

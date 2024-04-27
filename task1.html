@@ -1,0 +1,75 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Table</title>
+    <style>
+        .selected {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <table id="checkbox-table">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="select-all" class="checkbox"></th>
+                <th>Name</th>
+                <th>Country</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="checkbox"></td>
+                <td>Gouthami</td>
+                <td>India</td>
+                <!-- Add more columns as needed -->
+            </tr>
+            <!-- Add more rows as needed -->
+            <tr>
+                <td><input type="checkbox" class="checkbox"></td>
+                <td>Gayathri</td>
+                <td>Canada</td>
+                <!-- Add more columns as needed -->
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox"></td>
+                <td>Dhana</td>
+                <td>America</td>
+                <!-- Add more columns as needed -->
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const table = document.getElementById("checkbox-table");
+            const checkboxes = document.querySelectorAll("#checkbox-table tbody input[type='checkbox']");
+            const selectAllCheckbox = document.getElementById("select-all");
+
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener("change", function() {
+                    // Clear all selected rows
+                    table.querySelectorAll("tr").forEach(function(row) {
+                        row.classList.remove("selected");
+                    });
+
+                    // Highlight selected row
+                    if (this.checked) {
+                        this.parentNode.parentNode.classList.add("selected");
+                    }
+                });
+            });
+
+            // Select All functionality
+            selectAllCheckbox.addEventListener("change", function() {
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.checked = selectAllCheckbox.checked;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
